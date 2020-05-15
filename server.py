@@ -2,7 +2,7 @@ import requests
 
 ROUTER_ID = 1
 INTERFACE_NAME = "clientes"
-MKAPI_URL = "http://192.168.0.5:7000"
+MKAPI_URL = "http://mkapi:5000"
 MAX_PROBE_COUNT = 20
 
 HEADERS = {"Authorization": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImJjdG0iLCJleHAiOjE1ODkyMjI0N"
@@ -10,7 +10,7 @@ HEADERS = {"Authorization": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2Vybm
 
 
 def run_api(query):
-    request = requests.post('https://server.enlacepatagonia.com/api2/', json={'query': query}, headers=HEADERS)
+    request = requests.post('http://wisp-server/api2/', json={'query': query}, headers=HEADERS)
     if request.status_code == 200:
         return request.json()
     else:
