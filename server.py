@@ -1,7 +1,7 @@
 import requests
 
 ROUTER_ID = 1
-INTERFACE_NAME = "clientes"
+INTERFACE_NAME = "CLIENTES"
 MKAPI_URL = "http://mkapi:5000"
 MAX_PROBE_COUNT = 20
 
